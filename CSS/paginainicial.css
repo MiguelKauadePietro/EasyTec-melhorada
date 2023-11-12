@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+
+:root {
+  /* Light */
+  --color-light-50: #f8fafc;
+
+  /* Dark */
+  --color-dark-50: #797984;
+  --color-dark-100: #312d37;
+  --color-dark-900: #000;
+
+  /* Blues and green */
+  --color-blue-50: #004AAD;
+  --color-blue-100: #006AAD;
+  --color-green-200: #00AD6F;
+  
+    /*Variaveis dark*/
+--color-newblue-75: #193465;
+--color-newblue-60: #25476d;
+--color-newblue-55: #275c79;
+--color-newgreen-65: #286469;
+--color-newgreen-75: #184e52;
+--color-newgreen-100: #143944;
+
+--color-newgradiente: linear-gradient(
+  90deg,
+  var(--color-newblue-60),
+  var(--color-newblue-55),
+  var(--color-newgreen-65),
+
+);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+
+}
+
+h2{
+  margin-left: 10px;
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  color: var(--color-green-200);
+  margin-top: 30px;
+}
+
+nav {
+  background: var(--color-blue-100);
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 200px;
+  margin-left: 150px;
+  
+  
+}
+
+.logo {
+  width: 180px;
+  height: 170px;
+  position: absolute;
+  top: -40px;
+  left: 45px;
+}
+nav ul {
+  float: right;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+
+}
+
+nav ul li a {
+  color: #fff;
+  font-size: 15px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bolder;
+  right: 40px;
+}
+
+nav ul li a:hover {
+  color: #99d8ff;
+  background-color: #004e80;
+  transition: 0.5s;
+}
+
+.navbar .navicones{
+  display: none;
+}
+/*------------- responsive ---------------*/
+
+@media (max-width: 960px) {
+  .logo {
+    display: flex;
+    align-items: center;
+    
+  }
+
+  footer{
+    display: none;
+  }
+
+  ul li a{ 
+        display: none;
+}
+
+  .container .card{
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
+  .carousel-container {
+    width: 100%;
+}
+
+.msg_planta{
+  text-align: center;
+}
+
+}
+
+
+@media (max-width: 1200px) {
+  nav ul li a{
+    right: 50px;
+  }
+
+  .carousel-container {
+    width: 90%;
+}
+}
+/*------------- responsive ---------------*/
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 90vh;
+}
+
+.container{
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+
+.container .card{
+  position: relative;
+  padding: -200px;
+  width: 300px;
+  height: 390px;
+  background-color: #fff;
+  margin: 20px;
+  /* border: 3px solid  #8FD3F7; */
+  overflow: hidden;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 0 0 1px rgba(6, 161, 223, 0.6);
+}
+
+
+.container card h1{
+  font-size: 2rem;
+}
+
+.container .card .content{
+  padding: 10px;
+  text-align: center;
+}
+
+.container card p{
+  color: #666;
+  transition: 0.5s;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .card a{
+  position: sticky;
+  top: 100px;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: 0.5s;
+  outline: none;
+  margin-top: 50px;
+}
+
+.container .card:hover{
+  background-color: #004e80;
+  color: #fff;
+  transition: 0.5s;
+  border: 3px solid #00D186;
+  box-shadow: 2px 20px 25px  #006aad;
+  scale: 1.1;
+  /* height: 45vh; */
+}
+
+.container .card a:hover{
+  background-color: #fff;
+  color: #00D186;
+  font-weight: bolder;
+}
+
+
+main ion-icon{
+  width: 50px;
+  height: 50px;
+}
+
+footer {
+  background: var(--color-blue-100);
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/*estilos do contato dos professores*/
+
+.UL {
+  list-style-type: none;
+  padding: 0;
+}
+
+.LI {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 15px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#downloadButton{
+  height: 40px;
+  width: 200px;
+  background-color: var(--color-blue-100);
+  border: none;
+  border-radius: 10px;
+  color: var(--color-light-50);
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+#downloadButton:hover{
+  background-color: var(--color-newblue-60);
+  color: var(--color-green-200);
+  scale: 1;
+  transition: 0.5s;
+}
+
+.msg_planta{
+  margin-bottom: 40px;
+  font-size: 20px;
+}
