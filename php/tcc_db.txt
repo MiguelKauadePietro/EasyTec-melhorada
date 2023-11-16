@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 08-Nov-2023 às 16:27
--- Versão do servidor: 10.4.22-MariaDB
--- versão do PHP: 8.0.13
+-- Generation Time: Nov 17, 2023 at 12:43 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,56 +18,191 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `tcc_db`
+-- Database: `tcc_db`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `usuarios`
+-- Table structure for table `cadastro`
+--
+
+CREATE TABLE `cadastro` (
+  `id` int(11) NOT NULL,
+  `funcao` char(3) NOT NULL,
+  `tipo` char(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `cadastro`
+--
+
+INSERT INTO `cadastro` (`id`, `funcao`, `tipo`) VALUES
+(41, 'pro', 'n'),
+(42, 'fun', 'n'),
+(43, 'ter', 'n'),
+(44, 'ter', 'n');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `funcionarios`
+--
+
+CREATE TABLE `funcionarios` (
+  `id` int(11) NOT NULL,
+  `Nome` varchar(240) NOT NULL,
+  `Email` varchar(240) NOT NULL,
+  `senha` varchar(240) NOT NULL,
+  `tipo` char(1) NOT NULL,
+  `funcao` char(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `funcionarios`
+--
+
+INSERT INTO `funcionarios` (`id`, `Nome`, `Email`, `senha`, `tipo`, `funcao`) VALUES
+(1, 'champs', 'champs@email.com', '$2y$10$oQfUabXCVChx/Gg2lUQsH.xrxLnvFsC2Q5L422YLVV.XKzIRNDwEC', 'n', 'fun'),
+(2, 'champs', 'champs@email.com', '$2y$10$1Jc2UpBDuXEMaG6JM.TU1.rYdfBsQkirdLPBVmLdZU7msL7eo18Nm', 'n', 'fun');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `professores`
+--
+
+CREATE TABLE `professores` (
+  `id` int(11) NOT NULL,
+  `Nome` varchar(240) NOT NULL,
+  `RA` int(100) NOT NULL,
+  `Email` varchar(240) NOT NULL,
+  `senha` varchar(240) NOT NULL,
+  `tipo` char(1) NOT NULL,
+  `funcao` char(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `professores`
+--
+
+INSERT INTO `professores` (`id`, `Nome`, `RA`, `Email`, `senha`, `tipo`, `funcao`) VALUES
+(1, 'Tadalas', 12345, 'tadalascanetao@email.com', '$2y$10$Wt5jXb/s8gkj8TSAl7QXYuK0Kes2OkwA4zK7qh.dtpQYRZDdBvM0q', 'n', 'pro');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tercerizados`
+--
+
+CREATE TABLE `tercerizados` (
+  `id` int(11) NOT NULL,
+  `Nome` varchar(240) NOT NULL,
+  `CPF` varchar(15) NOT NULL,
+  `senha` varchar(240) NOT NULL,
+  `tipo` char(1) NOT NULL,
+  `funcao` char(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `tercerizados`
+--
+
+INSERT INTO `tercerizados` (`id`, `Nome`, `CPF`, `senha`, `tipo`, `funcao`) VALUES
+(11, 'vagabunda', '123.456.789-10', '$2y$10$d.nBsZIep6FmMV1ZskPhUudkTfMCkbO/KI/PEo81HY9yXDHFY9J7S', 'n', 'ter');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `usuarios`
 --
 
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
   `Nome` varchar(100) NOT NULL,
-  `Email` varchar(240) NOT NULL,
   `RM` int(5) NOT NULL,
   `senha` varchar(240) NOT NULL,
   `tipo` char(1) NOT NULL,
   `funcao` char(3) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Extraindo dados da tabela `usuarios`
+-- Dumping data for table `usuarios`
 --
 
-INSERT INTO `usuarios` (`id`, `Nome`, `Email`, `RM`, `senha`, `tipo`, `funcao`) VALUES
-(29, 'Cristian', '', 19190, '$2y$10$S2TAfeBNKRuNyCxfczhPHeFTwLP4ukI9U7C7gP4VOHvfVz.ZL/HF2', 's', 'adm'),
-(30, 'Amanda', '', 32254, '$2y$10$pi45FbI.P1st4PhXVQfyCOea0FCZzuTYQQAKc8OuPb36l04GbXBZy', 's', 'adm'),
-(31, 'Miguel Kauã de Pietro', '', 21240, '$2y$10$h0RaF0gYOIappegk1eJ5V.FJ7ek7iH61c5yBVdriULT0F7Dr7ZIg.', 's', 'adm'),
-(34, 'Vanessa', 'vanessaparaninfa@email.com', 58362, '$2y$10$IkW1TP9InBAkUQo4oZnPC.kPjIKQlAW2V89lQq7i/H1h3QM8tO9wC', 's', 'pro'),
-(35, 'Tekinha', 'teka@email.com', 79415, '$2y$10$FD2JH7AyyCTuHt8jvQ9szet.SsvuQDb2y/XYXw3MveWequulvpTX.', 's', 'pro'),
-(36, 'Miguel', '', 12345, '$2y$10$tOWAzPs1.pzLLGATjSOlneBDnByi.AULJEZsgyPLSIPkzHeBSVxsa', 'n', 'alu');
+INSERT INTO `usuarios` (`id`, `Nome`, `RM`, `senha`, `tipo`, `funcao`) VALUES
+(29, 'Cristian', 19190, '$2y$10$S2TAfeBNKRuNyCxfczhPHeFTwLP4ukI9U7C7gP4VOHvfVz.ZL/HF2', 's', 'adm'),
+(30, 'Amanda', 32254, '$2y$10$pi45FbI.P1st4PhXVQfyCOea0FCZzuTYQQAKc8OuPb36l04GbXBZy', 's', 'adm'),
+(31, 'Miguel Kauã de Pietro', 21240, '$2y$10$h0RaF0gYOIappegk1eJ5V.FJ7ek7iH61c5yBVdriULT0F7Dr7ZIg.', 's', 'adm'),
+(80, 'Tadalas', 0, '$2y$10$KjMbJ68ImVSwMAramnbR5udFGVp0PS/dK2/c2feKqW9hMhVkHv9wS', 'n', 'alu');
 
 --
--- Índices para tabelas despejadas
+-- Indexes for dumped tables
 --
 
 --
--- Índices para tabela `usuarios`
+-- Indexes for table `cadastro`
+--
+ALTER TABLE `cadastro`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `funcionarios`
+--
+ALTER TABLE `funcionarios`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `professores`
+--
+ALTER TABLE `professores`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tercerizados`
+--
+ALTER TABLE `tercerizados`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `usuarios`
 --
 ALTER TABLE `usuarios`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT de tabela `usuarios`
+-- AUTO_INCREMENT for table `cadastro`
+--
+ALTER TABLE `cadastro`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+
+--
+-- AUTO_INCREMENT for table `funcionarios`
+--
+ALTER TABLE `funcionarios`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `professores`
+--
+ALTER TABLE `professores`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tercerizados`
+--
+ALTER TABLE `tercerizados`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
