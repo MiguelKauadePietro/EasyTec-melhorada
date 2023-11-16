@@ -8,6 +8,7 @@ if (!isset($_SESSION['usuario_id']) || $_SESSION['funcao'] != "ter") {
 
 $usuarionome = $_SESSION['usuario_Nome'];
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

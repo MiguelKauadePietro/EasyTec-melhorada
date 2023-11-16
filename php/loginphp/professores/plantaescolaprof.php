@@ -1,13 +1,14 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['usuario_id'])) {
+if (!isset($_SESSION['usuario_id']) || $_SESSION['funcao'] != "pro") {
   header('Location: login.php');
   exit();
 }
 
-$usuarioNome = $_SESSION['usuario_Nome'];
+$usuarionome = $_SESSION['usuario_Nome'];
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -15,35 +16,35 @@ $usuarioNome = $_SESSION['usuario_Nome'];
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../../CSS/paginainicial.css">
   <link rel="stylesheet" href="../../CSS/navresponsiva.css">
-  <link rel="stylesheet" href="../../CSS/planta.css">
+  <link rel="stylesheet" href="../../CSS/slide.css">
   <link rel="shortcut icon" href="../../imagens/EASYTEC.png" type="image/x-icon">
-  <title>Planta da Escola</title>
+  <title>Página Inicial</title>
 </head>
 <body>
 <header>
 <nav>
-    <a href="pagfun.php"> <img class="logo" src="../../imagens/logob.png"></a>
+    <a href="contatoprofProf"> <img class="logo" src="../../imagens/logob.png"></a>
     <ul>
-      <li><a class="HM" href="pagfun.php">Home</a></li>
-      <li><a class="PE" href="plantaescolafun">Planta da Escola</a></li>
-      <li><a class="HR" href="horariosfun.php">Horários</a></li>
-      <li><a class="CP" href="contatoprofFun.php">Contato dos Professores</a></li>
-      <li><a class="IS" href="infosecretariafun.php">Informações da Secretaria</a></li>
+      <li><a class="HM" href="contatoprofProf.php">Home</a></li>
+      <li><a class="PE" href="plantaescolaprof">Planta da Escola</a></li>
+      <li><a class="HR" href="horariosprof.php">Horários</a></li>
+      <li><a class="CP" href="contatoprofProf.php">Contato dos Professores</a></li>
+      <li><a class="IS" href="infosecretariaprof.php">Informações da Secretaria</a></li>
       <li><a href="logout.php">Sair</a></li>
 </ul>
   </nav>
 
-  <h2>Seja bem-vindo(a) à Planta da Escola, <?php echo $_SESSION['usuario_Nome']; ?>!</h2>
+  <h2>Seja bem-vindo(a) à Planta da Escola, Professor(a) <?php echo $_SESSION['usuario_Nome']; ?>!</h2>
 
 
-  <main>
+
 
   <main> 
     <h3>Clique no botão abaixo para baixar a imagem da Planta da Escola</h3>
     <button id="downloadButton">Baixar Imagem PNG</button>
   </main>
 
-  </main>
+
 </header>
 
     <footer>
@@ -52,32 +53,32 @@ $usuarioNome = $_SESSION['usuario_Nome'];
 
 <!-- nav-responsiva parte inferior -->
 <div class="responsive-nav">
-  <div   <div class="page-menus">
-        <a href="pagfun.php"><ion-icon name="home"></ion-icon>
+  <div class="page-menus">
+        <a href="pagprof.php"><ion-icon name="home"></ion-icon>
           <h1>Home</h1>
         </a>
       </div>
 
         <div class="page-menus">
-        <a href="plantaescolafun"><ion-icon name="navigate-outline"></ion-icon>
+        <a href="plantaescolaprof"><ion-icon name="navigate-outline"></ion-icon>
           <h1>Planta</h1>
         </a>
       </div>
 
         <div class="page-menus">
-        <a href="horariosfun.php"><ion-icon name="time-outline"></ion-icon>
+        <a href="horariosprof.php"><ion-icon name="time-outline"></ion-icon>
           <h1>Horários</h1>
         </a>
       </div>
 
         <div class="page-menus">
-        <a href="contatoprofFun.php"><ion-icon name="people-outline"></ion-icon>
+        <a href="contatoprofProf.php"><ion-icon name="people-outline"></ion-icon>
           <h1>Contat</h1>
         </a>
       </div>
 
         <div class="page-menus">
-        <a href="infosecretariafun.php"><ion-icon name="information-outline"></ion-icon>
+        <a href="infosecretariaprof.php"><ion-icon name="information-outline"></ion-icon>
           <h1>Info</h1>
         </a>
       </div>

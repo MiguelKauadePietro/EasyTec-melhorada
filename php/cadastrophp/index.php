@@ -12,79 +12,59 @@
 
     <link rel="stylesheet" href="../../CSS/cadastro.css">
 
-    <title>Cadastro</title>
+    <title>Escolha sua função</title>
 </head>
 
 <body>
     <main id="container">
-    <!-- <i id="mode_icone2" class="fa-solid fa-moon"></i> -->
         <form id="login_form" method="post" action="index.php">
             <!-- FORM HEADER -->
             <div id="form_header">
-                <h1>Cadastro</h1>
+                <h1>Escolha sua <br>função</h1>
                 <i id="mode_icon" class="fa-solid fa-moon"></i>
             </div>
+
             <?php
+require_once('conexao.php');
 
-            //requerindo a conexao com o BD
-            require_once('conexao.php');
+if ($_SERVER["REQUEST_METHOD"] === 'POST') {
+    $funcao = $_POST['funcao'];
 
+    $sql = "INSERT INTO cadastro VALUES (null, '$funcao', 'n')";
+    $resultado = mysqli_query($conexao, $sql);
 
-            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                if(!empty($_POST['Nome'])) {
-                $nome = $_POST['Nome'];
-                $RM = $_POST['RM'];
-                $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
-                $funcao = $_POST['funcao'];
-                
-                //inserindo os campos
-                $sql = "INSERT INTO usuarios VALUES (null, '$nome', '$RM', '$senha','n','$funcao')";
-                
-                //verificando os dados no banco
-                if (mysqli_query($conexao, $sql)) {
-                    echo "Cadastro realizado com sucesso!";
+    if ($resultado) {
+        echo "função escolhida com sucesso";
 
+        // Remova o fetch_assoc, pois você não precisa dele nesta parte do código
 
-                } else {
-                    echo "Erro ao cadastrar: " . mysqli_error($conexao);
-                }
-            }
-            }
-            ?>
-            <!-- INPUTS -->
-            <div id="inputs">
-                <!-- Nome -->
-                <div class="input-box">
-                    <label for="Nome">
-                        Nome
-                        <div class="input-field">
-                            <i class="fa-solid fa-user"></i>
-                            <input type="text" name="Nome" required>
-                        </div>
-                    </label>
-                </div>
-                <div class="input-box">
-                    <label for="RM">
-                        RM
-                        <div class="input-field">
-                            <i class="fa-solid fa-lock"></i>
-                            <input type="text" inputmode="numeric" pattern="[0-9]*" id="RM" name="RM" required>
-                        </div>
-                    </label>
-                </div>
-
-                <!-- PASSWORD -->
-                <div class="input-box">
-                    <label for="password">
-                        Senha
-                        <div class="input-field">
-                            <i class="fa-solid fa-key"></i>
-                            <input type="password" id="password" name="senha" required>
-                        </div>
-                    </label>
-                </div>
+        switch ($funcao) {
+            case 'alu':
+                header('location: cadastroaluno.php');
+                exit(); // Importante: certifique-se de sair após o redirecionamento
+                break;
+            case 'pro':
+                header('location: cadastroprof.php');
+                exit(); // Importante: certifique-se de sair após o redirecionamento
+                break;
+            case 'fun':
+                header('location: cadastrofun.php');
+                exit(); // Importante: certifique-se de sair após o redirecionamento
+                break;
+            case 'ter':
+                header('location: cadastroter.php');
+                exit(); // Importante: certifique-se de sair após o redirecionamento
+                break;
+            default:
+                echo "Erro na escolha da função: " . mysqli_error($conexao);
+                break;
+        }
+    }
+}
+?>
 
                 <a id="linkcadastro" href="../loginphp/login.php">Já possui uma conta?</a>
+
 
             </div>
 

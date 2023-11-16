@@ -1,12 +1,12 @@
 <?php
 session_start();
 
-if (!isset($_SESSION['usuario_id'])) {
+if (!isset($_SESSION['usuario_id']) || $_SESSION['funcao'] != "pro") {
   header('Location: login.php');
   exit();
 }
 
-$usuarioNome = $_SESSION['usuario_Nome'];
+$usuarionome = $_SESSION['usuario_Nome'];
 ?>
 
 <!DOCTYPE html>
