@@ -31,7 +31,7 @@ $usuarionome = $_SESSION['usuario_Nome'];
       <li><a class="HR" href="horariosfun.php">Horários</a></li>
       <li><a class="CP" href="contatoprofFun.php">Contato dos Professores</a></li>
       <li><a class="IS" href="infosecretariafun.php">Informações da Secretaria</a></li>
-      <li><a href="logout.php">Sair</a></li>
+      <li><a href="../logoutfun.php">Sair</a></li>
 </ul>
   </nav>
   <br>
@@ -47,7 +47,7 @@ $usuarionome = $_SESSION['usuario_Nome'];
     //Conexão com o Banco de Dados
     include_once("conexaologin.php");
 
-    //Comando SQL para buscar os usuários inativos
+    //Comando SQL para buscar os Professores
     $stmt = "select * from usuarios where funcao = 'pro';";
 
     //Executando o comando SQL
@@ -114,7 +114,7 @@ $usuarionome = $_SESSION['usuario_Nome'];
       </div>
 
         <div class="page-menus">
-        <a href="logout.php"><ion-icon name="exit-outline"></ion-icon>
+        <a href="../logoutfun.php"><ion-icon name="exit-outline"></ion-icon>
           <h1>Sair</h1>
         </a>
       </div>

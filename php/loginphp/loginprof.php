@@ -13,7 +13,7 @@
 <body>
     <main id="container">
     <!-- <i id="mode_icone2" class="fa-solid fa-moon"></i> -->
-        <form id="login_form" method="post" action="logar.php">
+        <form id="login_form" method="post" action="logarprof.php">
             <!-- FORM HEADER -->
             <div id="form_header">
                 <h1>Login</h1>
@@ -24,11 +24,11 @@
             <div id="inputs">
                 <!-- EMAIL -->
                 <div class="input-box">
-                    <label for="RM">
-                        RM
+                    <label for="RA">
+                        RA
                         <div class="input-field">
                             <i class="fa-solid fa-user"></i>
-                            <input type="number" name="RM" placeholder="Ex: 12345" required>
+                            <input type="number" name="RA" placeholder="Ex: 1234567-0" required>
                         </div>
                     </label>
                 </div>
@@ -44,7 +44,7 @@
                     </label>
                
                 </div>
-                <a href="../cadastrophp/cadastroaluno.php">Não tem uma conta?</a>
+                <a href="../cadastrophp/cadastroprof.php">Não tem uma conta?</a>
                 <p>
                     <?php
                         if(isset($_GET["erro"])){

@@ -63,9 +63,6 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
 }
 ?>
 
-                <a id="linkcadastro" href="../loginphp/login.php">Já possui uma conta?</a>
-
-
             </div>
 
             

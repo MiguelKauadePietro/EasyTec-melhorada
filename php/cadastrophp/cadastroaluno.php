@@ -59,7 +59,7 @@
                         Nome
                         <div class="input-field">
                             <i class="fa-solid fa-user"></i>
-                            <input type="text" name="Nome" placeholder="jandira da silva" required>
+                            <input type="text" name="Nome" placeholder="Ex: jandira da silva" required>
                         </div>
                     </label>
                 </div>
@@ -68,7 +68,7 @@
                         RM
                         <div class="input-field">
                             <i class="fa-solid fa-lock"></i>
-                            <input type="number" placeholder="12345" name="RM" required>
+                            <input type="number" placeholder="Ex: 12345" name="RM" required>
                         </div>
                     </label>
                 </div>
@@ -79,7 +79,7 @@
                         Senha
                         <div class="input-field">
                             <i class="fa-solid fa-key"></i>
-                            <input type="password" id="password" name="senha" placeholder="102030" required>
+                            <input type="password" id="password" name="senha" placeholder="Ex: 102030" required>
                         </div>
                     </label>
                 </div>

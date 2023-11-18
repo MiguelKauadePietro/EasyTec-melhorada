@@ -58,16 +58,16 @@
                         Nome
                         <div class="input-field">
                             <i class="fa-solid fa-user"></i>
-                            <input type="text" name="Nome" placeholder="jandira da silva" required>
+                            <input type="text" name="Nome" placeholder="Ex: jandira da silva" required>
                         </div>
                     </label>
                 </div>
                 <div class="input-box">
                     <label for="CPF">
-                        RM
+                        CPF
                         <div class="input-field">
-                            <i class="fa-solid fa-lock"></i>
-                            <input type="text" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="123.456.789-01" name="CPF" required>
+                        <i class="fa-solid fa-address-book"></i>
+                            <input type="text" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="Ex: 123.456.789-10" name="CPF" required>
                         </div>
                     </label>
                 </div>
@@ -78,12 +78,12 @@
                         Senha
                         <div class="input-field">
                             <i class="fa-solid fa-key"></i>
-                            <input type="password" id="password" name="senha" placeholder="12345" required>
+                            <input type="password" id="password" name="senha" placeholder="Ex: 102030" required>
                         </div>
                     </label>
                 </div>
 
-                <a id="linkcadastro" href="../loginphp/login.php">Já possui uma conta?</a>
+                <a id="linkcadastro" href="../loginphp/loginter.php">Já possui uma conta?</a>
 
             </div>
 

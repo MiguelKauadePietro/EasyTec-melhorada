@@ -58,7 +58,7 @@
                         Nome
                         <div class="input-field">
                             <i class="fa-solid fa-user"></i>
-                            <input type="text" name="Nome" placeholder="jandira da silva" required>
+                            <input type="text" name="Nome" placeholder="Ex: jandira da silva" required>
                         </div>
                     </label>
                 </div>
@@ -66,8 +66,8 @@
                     <label for="Email">
                         E-mail
                         <div class="input-field">
-                            <i class="fa-solid fa-lock"></i>
-                            <input type="Email" name="Email" placeholder="champs@email.com" required>
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="Email" name="Email" placeholder="Ex: champs@email.com" required>
                         </div>
                     </label>
                 </div>
@@ -78,12 +78,12 @@
                         Senha
                         <div class="input-field">
                             <i class="fa-solid fa-key"></i>
-                            <input type="password" id="password" name="senha" required>
+                            <input type="password" id="password" name="senha" placeholder="Ex: 102030" required>
                         </div>
                     </label>
                 </div>
 
-                <a id="linkcadastro" href="../loginphp/login.php">Já possui uma conta?</a>
+                <a id="linkcadastro" href="../loginphp/loginfun.php">Já possui uma conta?</a>
 
             </div>
 

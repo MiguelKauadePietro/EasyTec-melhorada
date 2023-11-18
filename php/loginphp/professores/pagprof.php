@@ -30,7 +30,7 @@ $usuarioNome = $_SESSION['usuario_Nome'];
       <li><a class="HR" href="horariosprof.php">Horários</a></li>
       <li><a class="CP" href="contatoprofProf.php">Contato dos Professores</a></li>
       <li><a class="IS" href="infosecretariaprof.php">Informações da Secretaria</a></li>
-      <li><a href="logout.php">Sair</a></li>
+      <li><a href="../logoutprof.php">Sair</a></li>
 </ul>
   </nav>
 
@@ -124,7 +124,7 @@ $usuarioNome = $_SESSION['usuario_Nome'];
       </div>
 
         <div class="page-menus">
-        <a href="logout.php"><ion-icon name="exit-outline"></ion-icon>
+        <a href="../logoutprof.php"><ion-icon name="exit-outline"></ion-icon>
           <h1>Sair</h1>
         </a>
       </div>

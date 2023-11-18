@@ -21,15 +21,6 @@
                                 } elseif ($usuario['funcao'] == "alu") {
                                     $_SESSION['funcao'] = "alu";
                                     header("location:dashboard.php");
-                                } elseif ($usuario['funcao'] == "pro") {
-                                    $_SESSION['funcao'] = "pro";
-                                    header("location:pagprof.php"); //colocar a página do professor
-                                } elseif ($usuario['funcao'] == "fun") {
-                                    $_SESSION['funcao'] = "fun";
-                                    header("location:pagfun.php");
-                                } elseif ($usuario['funcao'] == "ter") {
-                                    $_SESSION['funcao'] = "ter";
-                                    header("location:pagter.php");
                                 }
                                 exit();
                             } else {
