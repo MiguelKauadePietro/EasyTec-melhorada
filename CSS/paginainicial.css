@@ -99,7 +99,7 @@ nav ul li a {
   text-transform: uppercase;
   text-decoration: none;
   font-weight: bolder;
-  right: 40px;
+  right: 60px;
 }
 
 nav ul li a:hover {
@@ -146,7 +146,11 @@ nav ul li a:hover {
 
 @media (max-width: 1200px) {
   nav ul li a{
-    right: 50px;
+    right: 100px;
+  }
+
+  nav{
+    margin-right: 100px;
   }
 
   .carousel-container {

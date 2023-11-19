@@ -5,7 +5,7 @@ require_once('conexaologin.php');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $CPF = $_POST['CPF'];
     $senha = $_POST['senha'];
-    $sql = "SELECT * FROM professores WHERE CPF = '$CPF'";
+    $sql = "SELECT * FROM tercerizados WHERE CPF = '$CPF'";
     $resultado = mysqli_query($conexao, $sql);
 
     if ($resultado && mysqli_num_rows($resultado) === 1) {
@@ -19,9 +19,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 if ($usuario['funcao'] == "adm") {
                     $_SESSION['funcao'] = "adm";
                     header("location:../telaadmin/telaadmin.php");
-                } elseif ($usuario['funcao'] == "pro") {
-                    $_SESSION['funcao'] = "pro";
-                    header("location:../tercerizados/pagprof.php");
+                } elseif ($usuario['funcao'] == "ter") {
+                    $_SESSION['funcao'] = "ter";
+                    header("location:../tercerizados/pagter.php");
                 }
                 exit();
             } else {
