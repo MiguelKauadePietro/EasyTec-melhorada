@@ -99,6 +99,7 @@
   background-color: var(--color-blue-50);
   bottom: 10px;
   border-radius: 5px;
+  margin-top: 5px;
 }
 
 
@@ -261,4 +262,16 @@ option {
   color: var(--color-green-200);
   background-color: var(--color-dark-100);
   animation: light-to-dark-background 0.3s ease-in-out;
+}
+
+@media (max-width: 960px){
+  #login_form form{
+    padding: 40px;
+  }
+}
+
+@media (max-width: 1200px){
+  #login_form form{
+    padding: 40px;
+  }
 }
