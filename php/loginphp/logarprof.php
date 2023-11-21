@@ -16,12 +16,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 session_start();
                 $_SESSION['usuario_id'] = $usuario['id'];
                 $_SESSION['usuario_Nome'] = $usuario['Nome'];
-                if ($usuario['funcao'] == "adm") {
-                    $_SESSION['funcao'] = "adm";
-                    header("location:../telaadmin/telaadmin.php");
-                } elseif ($usuario['funcao'] == "pro") {
+                if ($usuario['funcao'] == "pro") {
                     $_SESSION['funcao'] = "pro";
-                    header("location:../professores/pagprof.php");
+                    header("location: ./././professores/pagprof.php");
                 }
                 exit();
             } else {

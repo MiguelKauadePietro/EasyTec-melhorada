@@ -28,7 +28,7 @@
                         E-mail
                         <div class="input-field">
                             <i class="fa-solid fa-user"></i>
-                            <input type="Email" name="Email"  required>
+                            <input type="Email" name="Email" placeholder="Ex: champs@email.com"  required>
                         </div>
                     </label>
                 </div>

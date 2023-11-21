@@ -68,7 +68,7 @@
                         RA
                         <div class="input-field">
                             <i class="fa-solid fa-lock"></i>
-                            <input type="number" name="RA"  placeholder="Ex: 1234567-0"  required>
+                            <input type="text" name="RA"  placeholder="Ex: 1234567-0"  required>
                         </div>
                     </label>
                 </div>

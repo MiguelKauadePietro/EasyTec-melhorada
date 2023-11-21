@@ -14,19 +14,19 @@ $usuarioNome = $_SESSION['usuario_Nome'];
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../CSS/paginainicial.css">
-  <link rel="stylesheet" href="../../CSS/navresponsiva.css">
+  <link rel="stylesheet" href="../../../CSS/paginainicial.css">
+  <link rel="stylesheet" href="../../../CSS/navresponsiva.css">
   <link rel="stylesheet" href="../../CSS/slide.css">
-  <link rel="shortcut icon" href="../../imagens/EASYTEC.png" type="image/x-icon">
+  <link rel="shortcut icon" href="../../../imagens/EASYTEC.png" type="image/x-icon">
   <title>Página Inicial</title>
 </head>
 <body>
 <header>
 <nav>
-    <a href="contatoprofProf"> <img class="logo" src="../../imagens/logob.png"></a>
+    <a href="pagprof.php"> <img class="logo" src="../../../imagens/logob.png"></a>
     <ul>
-      <li><a class="HM" href="contatoprofProf.php">Home</a></li>
-      <li><a class="PE" href="plantaescolaprof">Planta da Escola</a></li>
+      <li><a class="HM" href="pagprof.php">Home</a></li>
+      <li><a class="PE" href="plantaescolaprof.php">Planta da Escola</a></li>
       <li><a class="HR" href="horariosprof.php">Horários</a></li>
       <li><a class="CP" href="contatoprofProf.php">Contato dos Professores</a></li>
       <li><a class="IS" href="infosecretariaprof.php">Informações da Secretaria</a></li>
@@ -46,7 +46,7 @@ $usuarioNome = $_SESSION['usuario_Nome'];
         <div class="content">
           <p>Todos os espaços da escola sob um único aspecto. <br><br><br><br><br>
           </p>
-          <a href="plantaescola.php">Ver Planta da Escola</a>
+          <a href="plantaescolaprof.php">Ver Planta da Escola</a>
         </div>
 
       </div>
@@ -69,7 +69,7 @@ $usuarioNome = $_SESSION['usuario_Nome'];
         <div class="content">
           <p>No caso de alguma dúvida repentina relacionada a aula, é possível contatar os professores fora do horario de aula. <br>
           </p>
-          <a href="contatoprof.php">Contate os Professores</a>
+          <a href="contatoprofProf.php">Contate os Professores</a>
         </div>
 
       </div>
@@ -80,7 +80,7 @@ $usuarioNome = $_SESSION['usuario_Nome'];
         <h1>Informações Secretaria</h1>
         <div class="content">
           <p>Veja o horário de funcionamento e quais declarações e documentos importantes é possível adquirir na secretária. <br></p>
-          <a href="infosecretaria.php">Ver Informações Secretaria</a>
+          <a href="infosecretariaprof.php">Ver Informações Secretaria</a>
         </div>
       </div>
     </div>
@@ -100,7 +100,7 @@ $usuarioNome = $_SESSION['usuario_Nome'];
       </div>
 
         <div class="page-menus">
-        <a href="plantaescolaprof"><ion-icon name="navigate-outline"></ion-icon>
+        <a href="plantaescolaprof.php"><ion-icon name="navigate-outline"></ion-icon>
           <h1>Planta</h1>
         </a>
       </div>

@@ -16,12 +16,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 session_start();
                 $_SESSION['usuario_id'] = $usuario['id'];
                 $_SESSION['usuario_Nome'] = $usuario['Nome'];
-                if ($usuario['funcao'] == "adm") {
-                    $_SESSION['funcao'] = "adm";
-                    header("location:../telaadmin/telaadmin.php");
-                } elseif ($usuario['funcao'] == "ter") {
+                if ($usuario['funcao'] == "ter") {
                     $_SESSION['funcao'] = "ter";
-                    header("location:../tercerizados/pagter.php");
+                    header("location: ./././tercerizados/pagter.php");
                 }
                 exit();
             } else {

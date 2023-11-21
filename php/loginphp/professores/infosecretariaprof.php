@@ -14,19 +14,19 @@ $usuarionome = $_SESSION['usuario_Nome'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../CSS/infosecretaria.css">
-    <link rel="stylesheet" href="../../CSS/navresponsiva.css" >
-    <link rel="shortcut icon" href="../../imagens/EASYTEC.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../../CSS/infosecretaria.css">
+    <link rel="stylesheet" href="../../../CSS/navresponsiva.css" >
+    <link rel="shortcut icon" href="../../../imagens/EASYTEC.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Informações da Secretaria</title>
 </head>
 <header>
 <body>
 <nav>
-    <a href="contatoprofProf"> <img class="logo" src="../../imagens/logob.png"></a>
+    <a href="pagprof.php"> <img class="logo" src="../../../imagens/logob.png"></a>
     <ul>
-      <li><a class="HM" href="contatoprofProf.php">Home</a></li>
-      <li><a class="PE" href="plantaescolaprof">Planta da Escola</a></li>
+      <li><a class="HM" href="pagprof.php">Home</a></li>
+      <li><a class="PE" href="plantaescolaprof.php">Planta da Escola</a></li>
       <li><a class="HR" href="horariosprof.php">Horários</a></li>
       <li><a class="CP" href="contatoprofProf.php">Contato dos Professores</a></li>
       <li><a class="IS" href="infosecretariaprof.php">Informações da Secretaria</a></li>
@@ -143,7 +143,7 @@ $usuarionome = $_SESSION['usuario_Nome'];
       </div>
 
         <div class="page-menus">
-        <a href="plantaescolaprof"><ion-icon name="navigate-outline"></ion-icon>
+        <a href="plantaescolaprof.php"><ion-icon name="navigate-outline"></ion-icon>
           <h1>Planta</h1>
         </a>
       </div>
@@ -177,7 +177,7 @@ $usuarionome = $_SESSION['usuario_Nome'];
 </body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src="navbar.js"></script>
-<script src="carrossel.js"></script>
+<script src="../navbar.js"></script>
+<script src="../carrossel.js"></script>
 
 </html>

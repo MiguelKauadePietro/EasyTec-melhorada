@@ -5,7 +5,7 @@ require_once('conexaologin.php');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $Email = $_POST['Email'];
     $senha = $_POST['senha'];
-    $sql = "SELECT * FROM professores WHERE Email = '$Email'";
+    $sql = "SELECT * FROM funcionarios WHERE Email = '$Email'";
     $resultado = mysqli_query($conexao, $sql);
 
     if ($resultado && mysqli_num_rows($resultado) === 1) {
@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     header("location:../telaadmin/telaadmin.php");
                 } elseif ($usuario['funcao'] == "fun") {
                     $_SESSION['funcao'] = "fun";
-                    header("location:../funcionarios/pagfun.php");
+                    header("location: ./././funcionarios/pagfun.php");
                 }
                 exit();
             } else {

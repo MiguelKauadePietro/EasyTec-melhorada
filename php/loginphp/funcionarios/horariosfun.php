@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['usuario_id']) || $_SESSION['funcao'] != "fun") {
-  header('Location: login.php');
+  header('Location: ../../../loginfun.php');
   exit();
 }
 
@@ -14,20 +14,20 @@ $usuarionome = $_SESSION['usuario_Nome'];
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../../CSS/horarios.css">
-  <link rel="stylesheet" href="../../CSS/paginainicial.css">
-  <link rel="stylesheet" href="../../CSS/navresponsiva.css">
-  <link rel="shortcut icon" href="../../imagens/EASYTEC.png" type="image/x-icon">
+  <link rel="stylesheet" href="../../../CSS/horarios.css">
+  <link rel="stylesheet" href="../../../CSS/paginainicial.css">
+  <link rel="stylesheet" href="../../../CSS/navresponsiva.css">
+  <link rel="shortcut icon" href="../../../imagens/EASYTEC.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
   <title>Horários</title>
 </head>
 <body>
 <header>
 <nav>
-    <a href="pagfun.php"> <img class="logo" src="../../imagens/logob.png"></a>
+    <a href="pagfun.php"> <img class="logo" src="../../../imagens/logob.png"></a>
     <ul>
       <li><a class="HM" href="pagfun.php">Home</a></li>
-      <li><a class="PE" href="plantaescolafun">Planta da Escola</a></li>
+      <li><a class="PE" href="plantaescolafun.php">Planta da Escola</a></li>
       <li><a class="HR" href="horariosfun.php">Horários</a></li>
       <li><a class="CP" href="contatoprofFun.php">Contato dos Professores</a></li>
       <li><a class="IS" href="infosecretariafun.php">Informações da Secretaria</a></li>
@@ -442,7 +442,7 @@ $usuarionome = $_SESSION['usuario_Nome'];
       </div>
 
         <div class="page-menus">
-        <a href="plantaescolafun"><ion-icon name="navigate-outline"></ion-icon>
+        <a href="plantaescolafun.php"><ion-icon name="navigate-outline"></ion-icon>
           <h1>Planta</h1>
         </a>
       </div>
@@ -479,5 +479,5 @@ $usuarionome = $_SESSION['usuario_Nome'];
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
-<script src="navbar.js"></script>
+<script src="../navbar.js"></script>
 </html>

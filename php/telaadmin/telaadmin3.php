@@ -163,7 +163,7 @@ if (mysqli_num_rows($resultado) > 0) {
 <br>
 
 <!-- Rebaixar Funcionários -->
-<h1>Promover Funcionários</h1>
+<h1>Rebaixar Funcionários</h1>
 <div class="table-responsive">
 <div class="table table-bordered">
 <table class="table table-striped">
@@ -217,12 +217,12 @@ echo "<tr><td colspan = '5'>Nenhum professor ativo encontrado</td></tr>";
 </table>
 </div>
 </div>
-<!-- Promover Funcionários -->
+<!-- Rebaixar Funcionários -->
 
 <br>
 
-<!-- Promover Tercerizados -->
-<h1>Promover Tercerizados</h1>
+<!-- Rebaixar Tercerizados -->
+<h1>Rebaixar Tercerizados</h1>
 <div class="table-responsive">
 <div class="table table-bordered">
 <table class="table table-striped">
@@ -279,7 +279,7 @@ mysqli_Close($conn);
 </table>
 </div>
 </div>
-<!-- Promover Tercerizados -->
+<!-- Rebaixar Tercerizados -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
